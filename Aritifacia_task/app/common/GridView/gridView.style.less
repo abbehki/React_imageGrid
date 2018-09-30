@@ -1,0 +1,48 @@
+.gridview-component {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px;
+  .cardview {
+    padding: 10px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    transition: transform 0.2s;
+    .cardview-image {
+      height: auto;
+      width: 200px;
+      object-fit: contain;
+      background-size: cover;
+      background-repeat: no-repeat;
+      border-radius: 5px;      
+    }
+    .cardview-text {
+      display: none;
+      position: absolute;
+      justify-content: center;
+      align-items: center;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      background-color: red;
+      height: 20px;
+      width: 20px;
+      font-size: 15px;
+    }
+    &:hover {
+      z-index: 1;
+      -ms-transform: scale(1.5); /* IE 9 */
+      -webkit-transform: scale(1.5); /* Safari 3-8 */
+      transform: scale(1.5);
+      .cardview-text {
+        display: flex;
+      }
+      .cardview-image{
+        border-radius:none; 
+      }
+    }
+  }
+}
