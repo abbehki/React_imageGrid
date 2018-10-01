@@ -6,5 +6,8 @@ export default class DataModel {
     this.countLikes = datamodel.countLikes;
     this.countComment = datamodel.countComment;
     this.description = datamodel.description;
+    this.user=datamodel.User;
+    this.tag=datamodel.Tag;
+    this.userLikedpic=datamodel.userLikedpic;
   }
 }

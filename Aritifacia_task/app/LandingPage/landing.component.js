@@ -5,21 +5,38 @@ import { Link } from "react-router-dom";
 import Naviagtion from "../common/Navigation/navigation.component";
 import GridView from "../common/GridView/gridView.compoent";
 import SingleView from "../common/SingleView/singleView.component";
+import PopUpImage from "../common/Popup/popUp.component";
 
 import "./landing.style.less";
 class LandingPage extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      activeIndex: -1
+    };
   }
 
-  onclickevent = event => {
-    //dispatch
-    const { dispatch } = this.props;
-    dispatch({ type: ACTION.CHECK.LOAD, data: this.state.index });
+  onClickSingleimage = (index, e) => {
+    this.setState({
+      activeIndex: index
+    });
+  };
+  closePopup = () => {
+    this.setState({
+      activeIndex: -1
+    });
   };
   render() {
     return (
       <div className="landing-component">
+        {this.state.activeIndex >= 0 &&
+          this.props.landing_reducer.profileinfo && (
+            <PopUpImage
+              closePopup={this.closePopup}
+              index={this.state.activeIndex}
+              profileinfo={this.props.landing_reducer.profileinfo}
+            />
+          )}
         <div className="landing-header">
           <Naviagtion />
         </div>
@@ -29,12 +46,15 @@ class LandingPage extends React.Component {
               <div>
                 <GridView
                   profileinfo={this.props.landing_reducer.profileinfo}
+                  onClickSingleimage={this.onClickSingleimage}
                 />
               </div>
             )}
           {this.props.common.navindex === 0 && (
             <div>
-              <SingleView profileinfo={this.props.landing_reducer.profileinfo} />
+              <SingleView
+                profileinfo={this.props.landing_reducer.profileinfo}
+              />
             </div>
           )}
         </div>

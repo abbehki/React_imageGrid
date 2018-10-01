@@ -18,7 +18,9 @@ const responseStruture = {
       uploadDate: "21-10-1994",
       countLikes: "21",
       countComment: "2",
-      description: "MA LIFE MA RULE!!"
+      description: "MA LIFE MA RULE!!",
+      User: "Abhay Behki",
+      Tag: ["Ajay", "Jasmin"]
     },
     {
       profileImage:
@@ -27,7 +29,9 @@ const responseStruture = {
       uploadDate: "21-10-1994",
       countLikes: "21",
       countComment: "2",
-      description: "MA LIFE MA RULE!!"
+      description: "MA LIFE MA RULE!!",
+      User: "Abhay Behki",
+      Tag: ["Ajay", "Jasmin"]
     },
     {
       profileImage:
@@ -36,7 +40,10 @@ const responseStruture = {
       uploadDate: "21-10-1994",
       countLikes: "21",
       countComment: "2",
-      description: "MA LIFE MA RULE!!"
+      description: "MA LIFE MA RULE!!",
+      User: "Abhay Behki",
+      Tag: ["Ajay", "Jasmin"],
+      userLikedpic: true
     },
     {
       profileImage:
@@ -45,7 +52,9 @@ const responseStruture = {
       uploadDate: "22-10-1994",
       countLikes: "11",
       countComment: "8",
-      description: "MA LIFE MA RULE!!"
+      description: "MA LIFE MA RULE!!",
+      User: "Abhay Behki",
+      Tag: ["Ajay", "Jasmin"]
     },
     {
       profileImage:
@@ -54,7 +63,10 @@ const responseStruture = {
       uploadDate: "21-09-1999",
       countLikes: "29",
       countComment: "66",
-      description: "YOLO!!"
+      description: "YOLO!!",
+      User: "Abhay Behki",
+      Tag: ["Ajay", "Jasmin"],
+      userLikedpic: true
     }
   ]
 };

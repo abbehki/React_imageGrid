@@ -9,14 +9,14 @@ class GridView extends React.Component {
     super(props);
   }
   render() {
-    const { profileinfo } = this.props;
+    const { profileinfo , onClickSingleimage } = this.props;
     return (
       <div className="gridview-component">
         {profileinfo.map((item, index) => {
           return (
             <div className="cardview" key={index}>
               <img className="cardview-image" src={item.profileImage} />
-              <div className="cardview-text">+</div>
+              <div onClick={onClickSingleimage.bind(this,index)} className="cardview-text">+</div>
             </div>
           );
         })}
